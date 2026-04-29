@@ -2,211 +2,257 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IV Premium-Selling Report — 2026-04-29</title>
+<title>Daily IV Premium-Selling Report — 2026-04-29</title>
 <style>
-  :root {
-    --bg: #0f1117;
-    --card: #1a1d27;
-    --border: #2a2d3a;
-    --text: #e4e4e7;
-    --muted: #9ca3af;
-    --green: #22c55e;
-    --red: #ef4444;
-    --yellow: #eab308;
-    --blue: #3b82f6;
-    --purple: #a855f7;
-    --orange: #f97316;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    padding: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  h1 { font-size: 1.5rem; margin-bottom: 4px; }
-  h2 { font-size: 1.15rem; margin: 28px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
-  .meta { color: var(--muted); font-size: 0.82rem; margin-bottom: 18px; font-style: italic; }
-  .regime-box {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 18px;
-    margin-bottom: 20px;
-  }
-  .regime-label { font-size: 1.05rem; font-weight: 600; }
-  .regime-guidance { color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
-  .standdown {
-    background: #1c1a11;
-    border: 1px solid #4a4520;
-    border-radius: 8px;
-    padding: 14px 18px;
-    color: var(--yellow);
-    font-weight: 500;
-    margin-bottom: 8px;
-  }
-  .standdown-reason { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.82rem;
-    margin-bottom: 8px;
-  }
-  th {
-    background: var(--card);
-    color: var(--muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.72rem;
-    letter-spacing: 0.5px;
-    padding: 8px 10px;
-    text-align: left;
-    border-bottom: 2px solid var(--border);
-    white-space: nowrap;
-  }
-  td {
-    padding: 8px 10px;
-    border-bottom: 1px solid var(--border);
-    white-space: nowrap;
-  }
-  tr:hover { background: rgba(255,255,255,0.03); }
-  .up { color: var(--green); }
-  .down { color: var(--red); }
-  .tag {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-  .tag-green { background: rgba(34,197,94,0.15); color: var(--green); }
-  .tag-red { background: rgba(239,68,68,0.15); color: var(--red); }
-  .tag-yellow { background: rgba(234,179,8,0.15); color: var(--yellow); }
-  .tag-blue { background: rgba(59,130,246,0.15); color: var(--blue); }
-  .tag-purple { background: rgba(168,85,247,0.15); color: var(--purple); }
-  .tag-muted { background: rgba(156,163,175,0.15); color: var(--muted); }
-  .notes {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 18px;
-    font-size: 0.85rem;
-  }
-  .notes li { margin-bottom: 6px; color: var(--muted); }
-  .notes li strong { color: var(--text); }
-  .risk-box {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 18px;
-    font-size: 0.82rem;
-    color: var(--muted);
-  }
-  .risk-box li { margin-bottom: 5px; }
-  .risk-box strong { color: var(--text); }
-  .watchlist-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 18px;
-    margin-bottom: 8px;
-  }
-  .watchlist-ticker { font-weight: 700; font-size: 1rem; }
-  .watchlist-detail { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
-  .section-empty { color: var(--muted); font-size: 0.88rem; font-style: italic; padding: 8px 0; }
-  .filter-fail { color: var(--red); font-weight: 600; }
-  @media (max-width: 700px) {
-    body { padding: 12px; }
-    table { font-size: 0.75rem; }
-    th, td { padding: 6px 6px; }
-    .regime-box, .notes, .risk-box, .watchlist-card { padding: 10px 12px; }
-  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 1180px; margin: 24px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.5; }
+  h1 { border-bottom: 2px solid #333; padding-bottom: 8px; margin-bottom: 4px; }
+  h2 { margin-top: 28px; padding-bottom: 4px; border-bottom: 1px solid #ddd; }
+  .source { color: #666; font-size: 0.9em; margin-bottom: 14px; }
+  .regime { background: #f4f8ff; border-left: 4px solid #4a78d6; padding: 10px 16px; margin: 14px 0 18px; font-size: 0.97em; }
+  .regime b { color: #2c4f9e; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92em; }
+  th, td { border: 1px solid #ccc; padding: 6px 9px; text-align: left; vertical-align: top; }
+  th { background: #f4f4f4; }
+  tr:nth-child(even) td { background: #fafafa; }
+  td.green  { background: #e8f6e8 !important; }
+  td.yellow { background: #fff7d6 !important; }
+  td.red    { background: #fbe5e5 !important; }
+  td.gray   { background: #f0f0f0 !important; color: #666; }
+  .standdown { background: #fff7d6; padding: 12px 16px; border-left: 4px solid #d4a017; margin: 10px 0; }
+  .harvest { background: #eef5ff; padding: 12px 16px; border-left: 4px solid #2860c0; margin: 10px 0; }
+  .risk-box { background: #fafafa; border: 1px solid #ddd; padding: 12px 18px; border-radius: 4px; margin: 12px 0; }
+  .tonight { background: #fff0e0; border-left: 4px solid #e07000; padding: 10px 16px; margin: 10px 0; font-size: 0.96em; }
+  .footer { color: #888; font-size: 0.85em; margin-top: 30px; border-top: 1px solid #eee; padding-top: 12px; }
+  ul { margin: 6px 0 6px 22px; }
+  li { margin-bottom: 4px; }
+  code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .tag-harvest { background: #d0e8ff; color: #1040a0; font-size: 0.8em; padding: 1px 5px; border-radius: 3px; font-weight: 600; }
+  .tag-tonight { background: #ffe5b0; color: #a05000; font-size: 0.8em; padding: 1px 5px; border-radius: 3px; font-weight: 600; }
 </style>
 </head>
 <body>
 
-<h1>&#x1F4CB; Daily IV Premium-Selling Report &#x2014; April 29, 2026</h1>
-<p class="meta">Source: MarketChameleon (live, 15-min delayed). Pulled ~4:03 PM ET. Prompt v2.5.</p>
+<h1>📋 Daily IV Premium-Selling Report — 2026-04-29</h1>
+<div class="source">Source: MarketChameleon (live, 15-min delayed). Pulled 4:30 PM ET. All 15 tickers + VIX returned clean data.</div>
 
-<div class="regime-box">
-  <div class="regime-label">Market Regime: VIX 19.32 &#x2014; <span style="color:var(--blue)">Neutral</span></div>
-  <div class="regime-guidance">VIX 15&#x2013;20: Proceed normally with standard sizing and strategy.</div>
+<div class="regime">
+  <b>Market Regime: VIX 19.55 — Neutral (15–20)</b><br>
+  Proceed normally on sizing and structure. No special tightening required by regime alone. Note: VIX +3.4% today (+0.64) on a mixed tape — watch for creep above 20.
 </div>
 
-<h2>&#x1F3AF; SHORTLIST (Actionable Today)</h2>
-<div class="standdown">No qualifying setups today &#x2014; stand down on standard strategy.</div>
-<div class="standdown-reason">NVDA has the best IV profile (Rank 69%, VRP +6.0) but earnings in 21 days puts it in RED tier. TSLA is in post-earnings cooldown with depressed IV (Rank 0%). IBIT lacks sufficient IV rank (32%) and VRP is negative.</div>
-
-<h2>&#x26A1; PRE-EARNINGS HARVEST</h2>
-<p class="section-empty">None today. NVDA earnings in 21 days is outside the 5&#x2013;14 day harvest window.</p>
-
-<h2>&#x1F440; WATCHLIST (Almost Actionable)</h2>
-<div class="watchlist-card">
-  <div class="watchlist-ticker">NVDA <span class="tag tag-purple">Uptrend</span></div>
-  <div class="watchlist-detail">
-    $209.25 &nbsp;|&nbsp; IV Rank 69% <span class="tag tag-green">Elevated</span> &nbsp;|&nbsp; VRP +6.0 &nbsp;|&nbsp; Fails: <span class="filter-fail">Earnings tier RED (21 days to ER May 20)</span>
-  </div>
-  <div class="watchlist-detail">
-    Verdict if qualified: Sell puts, 30&#x2013;45 DTE &nbsp;|&nbsp; Expected move (~37D): &#xB1;$29.38 &nbsp;|&nbsp; Strike zone: $179.87 &#x2013; $238.63
-  </div>
-  <div class="watchlist-detail" style="margin-top:6px; color:var(--yellow);">
-    &#x23F3; Revisit post-print after May 20 earnings for IV-crush opportunity. Strong VRP setup if tier clears.
-  </div>
+<div class="tonight">
+  🚨 <b>GOOG reports TONIGHT (29-Apr AMC)</b> — IV Rank 83%, VRP +6.8. Do <em>not</em> enter new premium trades in GOOG today. Re-screen tomorrow for the post-print IV crush play.
 </div>
 
-<h2>&#x1F4CA; FULL TABLE (All Tickers)</h2>
-<div style="overflow-x:auto;">
+<h2>🎯 SHORTLIST (Actionable Today — Standard 30–45 DTE)</h2>
 <table>
   <thead>
     <tr>
-      <th>Ticker</th><th>Price</th><th>1D%</th><th>30D IV</th><th>IV Rank</th><th>Label</th><th>VRP</th><th>Trend</th><th>Earnings</th><th>Tier</th><th>Days to ER</th><th>Days Since ER</th><th>Mkt Cap</th><th>EM (~37D)</th>
+      <th>#</th><th>Ticker</th><th>Price</th><th>IV Rank</th><th>VRP</th>
+      <th>Tier</th><th>Verdict</th><th>Strike Zone (1σ ~37D ref)</th><th>Notes</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>NVDA</strong></td><td>$209.25</td><td class="down">-1.8%</td><td>44.1 <span class="up">+1.1</span></td><td>69%</td><td><span class="tag tag-green">Elevated</span></td><td class="up">+6.0</td><td><span class="tag tag-purple">Uptrend</span></td><td>May 20 AMC</td><td><span class="tag tag-red">RED</span></td><td>21</td><td>63</td><td>5.1T</td><td>&#xB1;$29.38</td>
+      <td>1</td><td><strong>MRVL</strong></td><td>$156.57</td><td>99%</td><td>+11.4</td>
+      <td class="yellow">YELLOW (30d — May 29)</td>
+      <td>Sell 16Δ puts, <strong>May 16 expiry</strong> (clears May 29 ER by 13d)</td>
+      <td>±$40.83 (~26%); shorter DTE narrows significantly</td>
+      <td>Strongest setup on the board. Rank 99%, VRP +11.4, Uptrend. Use May 16 (17 DTE) to stay comfortably ahead of May 29 earnings. Short put or put credit spread.</td>
     </tr>
     <tr>
-      <td><strong>IBIT</strong></td><td>$42.75</td><td class="down">-1.2%</td><td>39.7 <span class="up">+0.4</span></td><td>32%</td><td><span class="tag tag-blue">Moderate</span></td><td class="down">-1.4</td><td><span class="tag tag-green">Bullish XO</span></td><td>N/A (ETF)</td><td><span class="tag tag-green">GREEN</span></td><td>N/A</td><td>N/A</td><td>61.3B</td><td>&#xB1;$5.40</td>
+      <td>2</td><td><strong>NVDA</strong></td><td>$209.25</td><td>69%</td><td>+6.0</td>
+      <td class="yellow">YELLOW (21d — May 20)</td>
+      <td>Sell 16Δ puts, <strong>May 16 expiry</strong> (last expiry before May 20 ER)</td>
+      <td>±$29.38 (~14%); at May 16 DTE ≈ ±$19.91 (~9.5%)</td>
+      <td>Rank 69%, VRP +6.0, Uptrend. May 16 = 17 DTE, expiring 4 days before earnings. Alternatively wait for post-print June+ setup if you want the full 30–45 DTE structure. Defined-risk preferred on the short-DTE play.</td>
     </tr>
     <tr>
-      <td><strong>TSLA</strong></td><td>$372.80</td><td class="down">-0.9%</td><td>38.5 <span class="down">-0.7</span></td><td>0%</td><td><span class="tag tag-muted">Subdued</span></td><td class="down">-9.0</td><td><span class="tag tag-muted">N/A</span></td><td>Jul 23 (Est.)</td><td><span class="tag tag-yellow">COOLDOWN</span></td><td>85</td><td>7</td><td>1.4T</td><td>&#xB1;$45.69</td>
+      <td>3</td><td><strong>MU</strong></td><td>$518.46</td><td>93%</td><td>+3.1</td>
+      <td class="green">GREEN (58d — Jun 26)</td>
+      <td>Sell 16Δ puts, standard <strong>30–45 DTE</strong> (Jun 13 expiry)</td>
+      <td>±$124.46 (~24%)</td>
+      <td>Rank 93%, GREEN tier, Uptrend. VRP is minimum-qualifying (+3.1 just clears threshold). Realized vol had been high — if HV20 cools further VRP widens. This is the cleanest structure-wise; only concern is thin VRP edge.</td>
     </tr>
   </tbody>
 </table>
-</div>
 
-<h2>&#x1F4DD; NOTES</h2>
-<div class="notes">
-  <ul style="list-style: none; padding: 0;">
-    <li>&#x25B8; <strong>TSLA</strong> &#x2014; IV at 52-week low (Rank 0%) following April 22 earnings. VRP deeply negative (-9.0) as realized vol (47.5) far exceeds implied (38.5). Post-earnings cooldown active (7 days since report). Re-evaluate in 3&#x2013;5 days as HV decays and IV normalizes.</li>
-    <li>&#x25B8; <strong>NVDA</strong> &#x2014; Strongest IV profile in the list (Rank 69%, VRP +6.0). Uptrend intact but earnings on May 20 AMC places it firmly in RED tier. <strong>Revisit post-print:</strong> this is the top candidate for an IV-crush put-sell after the May 20 report if the stock holds its uptrend.</li>
-    <li>&#x25B8; <strong>IBIT</strong> &#x2014; Bullish crossover is constructive but IV rank (32%) and negative VRP (-1.4) suggest the options market is not pricing enough premium to harvest. Realized vol (41.1) is running above implied (39.7). Not attractive for premium selling today.</li>
-    <li>&#x25B8; <strong>Tape context:</strong> VIX at 19.32, upper end of Neutral band (+2.2% today). All three tickers closed red. Broad market tone slightly defensive.</li>
-    <li>&#x25B8; <strong>Upcoming earnings:</strong> NVDA reports May 20 AMC &#x2014; monitor for pre-earnings harvest window when it enters the 5&#x2013;14 day zone (around May 6&#x2013;15).</li>
-  </ul>
+<h2>⚡ PRE-EARNINGS HARVEST</h2>
+<div class="harvest">
+  <strong>Separate strategy</strong> — 3–5 DTE expiring <em>before</em> the print. Smaller size, defined-risk only. Both below: Rank ≥ 99%, VRP > 6, Uptrend → lean puts.
 </div>
+<table>
+  <thead>
+    <tr>
+      <th>#</th><th>Ticker</th><th>Price</th><th>IV Rank</th><th>VRP</th>
+      <th>Earnings</th><th>Verdict</th><th>Strike Zone (1σ ~37D ref)</th><th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td><td><strong>AMD</strong></td><td>$337.11</td><td>100%</td><td>+7.3</td>
+      <td>5-May AMC (6d)</td>
+      <td>Sell put spread, <strong>May 2 expiry</strong> (Fri before earnings)</td>
+      <td>±$73.74 (37D ref); at 3 DTE ≈ ±$21.0 (~6.2%)</td>
+      <td>Uptrend → lean put side. Rank 100%, VRP +7.3 — richest vol-harvest setup on the board. Defined-risk required. May 2 weekly expires before the May 5 AMC print. Size to 0.5–1% risk max.</td>
+    </tr>
+    <tr>
+      <td>2</td><td><strong>ARM</strong></td><td>$201.69</td><td>99%</td><td>+6.5</td>
+      <td>6-May AMC (7d)</td>
+      <td>Sell put spread, <strong>May 2 expiry</strong> (Fri before earnings)</td>
+      <td>±$55.16 (37D ref); at 3 DTE ≈ ±$15.7 (~7.8%)</td>
+      <td>Uptrend → lean put side. Rank 99%, VRP +6.5. May 2 expiry gives 3 DTE, safely before May 6 AMC. Skip if May 2 puts are illiquid — verify spread width before entry.</td>
+    </tr>
+  </tbody>
+</table>
 
-<h2>&#x2696; RISK &amp; MANAGEMENT REMINDER</h2>
+<h2>👀 WATCHLIST (Almost actionable — close to filter cutoffs)</h2>
+<table>
+  <thead>
+    <tr><th>Ticker</th><th>Price</th><th>IV Rank</th><th>VRP</th><th>Trend</th><th>Why Not Today</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>GOOG</strong></td><td>$347.31</td><td>83%</td><td>+6.8</td><td>Uptrend</td>
+      <td><span class="tag-tonight">TONIGHT</span> <strong>Earnings 29-Apr AMC (tonight).</strong> Cannot sell premium into the print. However, Rank 83% and VRP +6.8 make this the highest-priority post-print IV crush candidate — re-screen tomorrow morning. Excellent setup if IV declines as expected post-print.</td>
+    </tr>
+    <tr>
+      <td><strong>PLTR</strong></td><td>$137.97</td><td>70%</td><td>+3.5</td><td>Downtrend</td>
+      <td><strong>Fails earnings tier</strong> — 5 days to 4-May AMC (RED). VRP and rank are qualifying. Downtrend → strangle or call-side bias if trading. Re-screen 5-May post-print for the IV crush opportunity.</td>
+    </tr>
+    <tr>
+      <td><strong>CLSK</strong></td><td>$11.37</td><td>60%</td><td>+11.4</td><td>Bullish Crossover</td>
+      <td><strong>Fails Market Cap filter</strong> ($2.9B &lt; $10B) and ER is 9d out (RED). VRP +11.4 is enormous but size risk is high on a micro-cap. Also fails earnings tier. Not actionable under standard rules.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>📊 FULL TABLE (All 15 Tickers)</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Ticker</th><th>Price</th><th>1D%</th><th>30D IV</th><th>IV Rank</th><th>Label</th>
+      <th>VRP</th><th>Trend</th><th>Earnings</th><th>Tier</th>
+      <th>Days to ER</th><th>Days Since ER</th><th>Mkt Cap</th><th>EM (~37D)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>TSLA</strong></td><td>$372.80</td><td>-0.9%</td><td>38.5</td><td>0%</td><td>Subdued</td>
+      <td>-9.0</td><td>—</td><td>23-Jul (Est.)</td><td class="green">GREEN (cooldown exit)</td>
+      <td>85</td><td>7</td><td>$1.4T</td><td>±$45.70 (12.3%)</td>
+    </tr>
+    <tr>
+      <td><strong>IBIT</strong> <em style="font-size:0.8em">(ETF)</em></td><td>$42.75</td><td>-1.2%</td><td>39.7</td><td>32%</td><td>Moderate</td>
+      <td>-1.4</td><td>Bullish Crossover</td><td>n/a (ETF)</td><td class="gray">n/a</td>
+      <td>n/a</td><td>n/a</td><td>$61.3B</td><td>±$5.40 (12.6%)</td>
+    </tr>
+    <tr>
+      <td><strong>MSTR</strong></td><td>$158.19</td><td>-4.5%</td><td>70.4</td><td>69%</td><td>Moderate</td>
+      <td>-2.8</td><td>Bullish Crossover</td><td>5-May AMC</td><td class="red">RED (≤20d)</td>
+      <td>6</td><td>~83</td><td>$55.4B</td><td>±$35.46 (22.4%)</td>
+    </tr>
+    <tr>
+      <td><strong>BSOL</strong> <em style="font-size:0.8em">(ETF)</em></td><td>$11.04</td><td>-2.2%</td><td>50.7</td><td>2%</td><td>Subdued</td>
+      <td>-7.2</td><td>Downtrend</td><td>n/a (ETF)</td><td class="gray">n/a</td>
+      <td>n/a</td><td>n/a</td><td>$598.7M</td><td>±$1.78 (16.1%)</td>
+    </tr>
+    <tr>
+      <td><strong>NVDA</strong></td><td>$209.25</td><td>-1.8%</td><td>44.1</td><td>69%</td><td>Moderate</td>
+      <td>+6.0</td><td>Uptrend</td><td>20-May AMC</td><td class="yellow">YELLOW (21–34d)</td>
+      <td>21</td><td>63</td><td>$5.1T</td><td>±$29.38 (14.0%)</td>
+    </tr>
+    <tr>
+      <td><strong>MU</strong></td><td>$518.46</td><td>+2.8%</td><td>75.4</td><td>93%</td><td>Elevated</td>
+      <td>+3.1</td><td>Uptrend</td><td>26-Jun (Est.)</td><td class="green">GREEN</td>
+      <td>58</td><td>42</td><td>$584.7B</td><td>±$124.46 (24.0%)</td>
+    </tr>
+    <tr>
+      <td><strong>ALAB</strong></td><td>$196.85</td><td>+7.4%</td><td>103.5</td><td>94%</td><td>Elevated</td>
+      <td>-0.1</td><td>Bullish Crossover</td><td>5-May AMC</td><td class="red">RED (≤20d)</td>
+      <td>6</td><td>~78</td><td>$33.7B</td><td>±$64.87 (33.0%)</td>
+    </tr>
+    <tr>
+      <td><strong>AMD</strong> <span class="tag-harvest">HARVEST</span></td><td>$337.11</td><td>+4.3%</td><td>68.7</td><td>100%</td><td>Elevated</td>
+      <td>+7.3</td><td>Uptrend</td><td>5-May AMC</td><td class="red">RED (≤20d) — Harvest</td>
+      <td>6</td><td>85</td><td>$549.6B</td><td>±$73.74 (21.9%)</td>
+    </tr>
+    <tr>
+      <td><strong>ARM</strong> <span class="tag-harvest">HARVEST</span></td><td>$201.69</td><td>+1.5%</td><td>85.9</td><td>99%</td><td>Elevated</td>
+      <td>+6.5</td><td>Uptrend</td><td>6-May AMC</td><td class="red">RED (≤20d) — Harvest</td>
+      <td>7</td><td>84</td><td>$213.6B</td><td>±$55.16 (27.3%)</td>
+    </tr>
+    <tr>
+      <td><strong>GOOG</strong> <span class="tag-tonight">TONIGHT</span></td><td>$347.31</td><td>-0.1%</td><td>36.3</td><td>83%</td><td>Elevated</td>
+      <td>+6.8</td><td>Uptrend</td><td>29-Apr AMC 🔴</td><td class="red">RED (tonight)</td>
+      <td>0</td><td>~91</td><td>$4.2T</td><td>±$40.14 (11.6%)</td>
+    </tr>
+    <tr>
+      <td><strong>MRVL</strong></td><td>$156.57</td><td>+2.2%</td><td>81.9</td><td>99%</td><td>Elevated</td>
+      <td>+11.4</td><td>Uptrend</td><td>29-May (Est.)</td><td class="yellow">YELLOW (21–34d)</td>
+      <td>30</td><td>55</td><td>$136.9B</td><td>±$40.83 (26.1%)</td>
+    </tr>
+    <tr>
+      <td><strong>PLTR</strong></td><td>$137.97</td><td>-2.3%</td><td>59.9</td><td>70%</td><td>Elevated</td>
+      <td>+3.5</td><td>Downtrend</td><td>4-May AMC</td><td class="red">RED (≤20d)</td>
+      <td>5</td><td>~85</td><td>$330.7B</td><td>±$26.31 (19.1%)</td>
+    </tr>
+    <tr>
+      <td><strong>CLSK</strong></td><td>$11.37</td><td>-3.6%</td><td>93.9</td><td>60%</td><td>Moderate</td>
+      <td>+11.4</td><td>Bullish Crossover</td><td>8-May (Est.)</td><td class="red">RED (≤20d)</td>
+      <td>9</td><td>~85</td><td>$2.9B</td><td>±$3.40 (29.9%)</td>
+    </tr>
+    <tr>
+      <td><strong>EOSE</strong></td><td>$6.34</td><td>-6.9%</td><td>117.1</td><td>72%</td><td>Elevated</td>
+      <td>-10.7</td><td>Bottom Bounce</td><td>13-May BMO</td><td class="red">RED (≤20d)</td>
+      <td>14</td><td>~85</td><td>$2.2B</td><td>±$2.36 (37.3%)</td>
+    </tr>
+    <tr>
+      <td><strong>SATS</strong></td><td>$119.78</td><td>-3.2%</td><td>64.2</td><td>54%</td><td>Moderate</td>
+      <td>-2.1</td><td>—</td><td>8-May (Est.)</td><td class="red">RED (≤20d)</td>
+      <td>9</td><td>~85</td><td>$34.4B</td><td>±$24.48 (20.4%)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>📝 NOTES</h2>
+<ul>
+  <li><strong>Tape context:</strong> Mixed session. Strong: AMD +4.3%, ALAB +7.4%, MU +2.8%, ARM +1.5%, MRVL +2.2%. Weak: EOSE -6.9%, MSTR -4.5%, CLSK -3.6%, SATS -3.2%, BSOL -2.2%, NVDA -1.8%. VIX 19.55 (+3.4%) — vol ticking up but still Neutral. Market on edge ahead of GOOG print tonight and next week's cluster.</li>
+  <li><strong>GOOG reports TONIGHT (29-Apr AMC):</strong> IV Rank 83%, VRP +6.8 — one of the cleanest post-print IV crush setups of the cycle. Flag for tomorrow's screen. If the stock gaps and settles, look to sell puts in the 30-45 DTE window at elevated Rank/VRP. Biggest catalyst for the tape this week.</li>
+  <li><strong>Next week earnings cluster — heavy:</strong> PLTR (4-May AMC), AMD + MSTR + ALAB (5-May AMC), ARM (6-May AMC), CLSK + SATS (8-May Est.). Over half the watchlist reports in the next 9 days. This week is pre-earnings IV build; next week is the crush. Position accordingly.</li>
+  <li><strong>Revisit post-print candidates (ER ≤ 7 days):</strong>
+    <ul>
+      <li><strong>GOOG</strong> — re-screen 30-Apr post-print. Rank likely collapses but VRP profile may remain attractive.</li>
+      <li><strong>PLTR</strong> — re-screen 5-May. Downtrend tag + VRP +3.5 → watch for put-sell if IV stays elevated post-crush.</li>
+      <li><strong>MSTR</strong> — re-screen 6-May. VRP currently negative (-2.8); worth watching if BTC vol resets.</li>
+      <li><strong>ALAB</strong> — re-screen 6-May. Rank 94% but VRP -0.1 (IV = HV — no edge selling vol now). Post-print reset may open it up.</li>
+      <li><strong>AMD / ARM</strong> — also in pre-harvest bucket above; re-screen 6-May and 7-May respectively.</li>
+    </ul>
+  </li>
+  <li><strong>TSLA:</strong> Exits 7-day post-earnings cooldown today (reported Apr 22). IV Rank at 0%, VRP -9.0 — completely crushed. Not a candidate until rank rebuilds above 50. Monitor next week.</li>
+  <li><strong>MRVL is the highest-conviction setup today:</strong> Rank 99%, VRP +11.4, Uptrend, 30d to ER. May 16 expiry is clean — gives 13 days of buffer before May 29 earnings. Best risk/reward on the board.</li>
+  <li><strong>MU VRP caution:</strong> VRP +3.1 just clears the +3 threshold. HV20 (72.3) has been catching up to IV (75.4). If chip volatility stays elevated, VRP could slip negative again. Confirm spread is positive in your platform before entry.</li>
+  <li><strong>No [DATA UNAVAILABLE] flags</strong> — all 15 tickers + VIX returned clean data this run.</li>
+</ul>
+
+<h2>🛡️ RISK &amp; MANAGEMENT REMINDER</h2>
 <div class="risk-box">
-  <ul style="list-style: none; padding: 0;">
-    <li>&#x25B8; <strong>Sizing:</strong> Max 1&#x2013;2% portfolio risk per trade. Smaller for pre-earnings harvest.</li>
-    <li>&#x25B8; <strong>Default short strike delta:</strong> 16&#x2013;25 delta for ~70&#x2013;80% probability of profit.</li>
-    <li>&#x25B8; <strong>Profit target:</strong> Close at 50% of max profit (or 70% if conviction is very high).</li>
-    <li>&#x25B8; <strong>Time exit:</strong> Close at 21 DTE regardless of P&amp;L (gamma risk ramps).</li>
-    <li>&#x25B8; <strong>Roll rule:</strong> Roll for credit only if the trade still meets the original entry filters. Otherwise close.</li>
-    <li>&#x25B8; <strong>Adjustment trigger:</strong> If short strike breached, defined-risk first, then evaluate close vs roll.</li>
-    <li>&#x25B8; <strong>Defined-risk preferred when:</strong> VIX &gt; 20, pre-earnings harvest, or first time trading a name.</li>
+  Standing rules — apply to every trade entered from this report:
+  <ul>
+    <li><strong>Sizing:</strong> Max 1–2% portfolio risk per trade. Smaller (0.5–1%) for pre-earnings harvest (AMD, ARM).</li>
+    <li><strong>Default short strike delta:</strong> 16–25 delta for ~70–80% probability of profit.</li>
+    <li><strong>Profit target:</strong> Close at 50% of max profit (or 70% if conviction is very high).</li>
+    <li><strong>Time exit:</strong> Close at 21 DTE regardless of P&amp;L (gamma risk ramps).</li>
+    <li><strong>Roll rule:</strong> Roll for credit only if the trade still meets the original entry filters. Otherwise close.</li>
+    <li><strong>Adjustment trigger:</strong> If short strike breached, defined-risk first, then evaluate close vs roll.</li>
+    <li><strong>Defined-risk preferred when:</strong> VIX &gt; 20, pre-earnings harvest, or first time trading a name. AMD and ARM harvest plays → defined-risk required.</li>
+    <li><strong>YELLOW tier note (NVDA, MRVL):</strong> Use May 16 expiry specifically — do not use a 30-45 DTE standard expiry that would straddle earnings.</li>
   </ul>
 </div>
 
-<p style="color:var(--muted); font-size:0.75rem; margin-top:24px; text-align:center;">
-  This is information only, not financial advice. Standard caveats apply. Generated by automated IV scanner.
-</p>
+<div class="footer">
+  Information only — not financial advice. Options carry substantial risk; size to your account and verify quotes on your broker before placing any order. Generated automatically at 4:30 PM ET.
+</div>
 
 </body>
-      </html>
+</html>
